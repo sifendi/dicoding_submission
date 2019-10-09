@@ -1,13 +1,57 @@
 package com.example.dicoding_submission;
 
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        RecyclerView recyclerKota;
+        ArrayList<Kota> arraylistdata = new ArrayList<>();
+        String HeaderTitle = "Dicoding Untuk Indonesia";
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.main_layout);
+            setActionBarTitle(HeaderTitle);
+
+            recyclerKota = findViewById(R.id.rv_kota);
+            recyclerKota.setHasFixedSize(true);
+            arraylistdata.addAll(KotaData.getListData());
+            showRecyclerCardView();
+
+
+        }
+
+
+        private void showRecyclerCardView(){
+            recyclerKota.setLayoutManager(new LinearLayoutManager(this));
+            CardViewKotaAdapter cardViewHeroAdapter = new CardViewKotaAdapter(arraylistdata);
+            recyclerKota.setAdapter(cardViewHeroAdapter);
+
+        }
+
+
+        private void setActionBarTitle(String title) {
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setTitle(title);
+            }
+        }
+
+//        private void showSelectedHero(Kota kota) {
+//            Toast.makeText(this, "Kamu memilih " + kota.getName(), Toast.LENGTH_SHORT).show();
+//        }
+
+
     }
-}

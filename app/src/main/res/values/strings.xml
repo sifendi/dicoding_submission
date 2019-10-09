@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">dicoding_submission</string>
+    <string name="detail">View Detail</string>
+    <string name="desc">You can read descriotion on this page</string>
+    <string name="titleofcity">The name of city</string>
+
+
 </resources>
