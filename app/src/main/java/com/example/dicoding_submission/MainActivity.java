@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.main_layout);
             setActionBarTitle(HeaderTitle);
 
+//            Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+//            setSupportActionBar(toolbar);
+//
+//            getSupportActionBar().setTitle(HeaderTitle);
+//            toolbar.setSubtitle("https://badoystudio.com");
+//            toolbar.setLogo(R.drawable.ic_location_city_black_24dp);ic_location_city_black_24dp
+
             recyclerKota = findViewById(R.id.rv_kota);
             recyclerKota.setHasFixedSize(true);
             arraylistdata.addAll(KotaData.getListData());

@@ -49,6 +49,37 @@ public class CardViewKotaAdapter extends RecyclerView.Adapter<CardViewKotaAdapte
             public void onClick(View v) {
                 Toast.makeText(holder.itemView.getContext(), "Nama Kota = "
                         +kota.getName().toString(), Toast.LENGTH_SHORT).show();
+                if (kota.getName().toString() == "Surabaya") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_Surabaya.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "Semarang") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_Semarang.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "Jakarta") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_Jakarta.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "Jogja") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_Jogja.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "Bali") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_Bali.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "Bandung") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_Bandung.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "NTB") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_NTB.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "NTT") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_NTT.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "Makassar") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_Makassar.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }else if (kota.getName().toString() == "Sumbar") {
+                    Intent intent = new Intent (holder.itemView.getContext(), Detail_Sumbar.class);
+                    holder.itemView.getContext().startActivity(intent);
+                }
 
             }
         });

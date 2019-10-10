@@ -9,22 +9,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
-public class Detail_surabaya extends AppCompatActivity {
+public class Detail_Jogja extends AppCompatActivity {
 
     Button back;
+    String Detailtitle ="Detail Page";
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.detail_layout_surabaya);
+        setContentView(R.layout.detail_layout_jogja);
+        setActionBarTitle(Detailtitle);
+
         back = (Button)findViewById(R.id.kembali);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent backtomain = new Intent(Detail_surabaya.this,MainActivity.class);
+                Intent backtomain = new Intent(Detail_Jogja.this,MainActivity.class);
                 startActivity(backtomain);
             }
         });
+    }
+
+
+
+    private void setActionBarTitle(String title) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
+        }
     }
 }

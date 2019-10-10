@@ -16,7 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Detail_surabaya"></activity>
+        <activity android:name=".Detail_Surabaya"></activity>
+        <activity android:name=".Detail_Semarang"></activity>
+        <activity android:name=".Detail_Bandung"></activity>
+        <activity android:name=".Detail_Bali"></activity>
+        <activity android:name=".Detail_Jakarta"></activity>
+        <activity android:name=".Detail_Jogja"></activity>
+        <activity android:name=".Detail_Makassar"></activity>
+        <activity android:name=".Detail_NTB"></activity>
+        <activity android:name=".Detail_NTT"></activity>
+        <activity android:name=".Detail_Sumbar"></activity>
     </application>
 
 </manifest>
