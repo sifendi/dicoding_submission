@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Detail_Surabaya"></activity>
         <activity android:name=".Detail_Semarang"></activity>
         <activity android:name=".Detail_Bandung"></activity>
@@ -26,6 +29,7 @@
         <activity android:name=".Detail_NTB"></activity>
         <activity android:name=".Detail_NTT"></activity>
         <activity android:name=".Detail_Sumbar"></activity>
+        <activity android:name=".About"></activity>
     </application>
 
 </manifest>
