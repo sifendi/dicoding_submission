@@ -19,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerKota;
         ArrayList<Kota> arraylistdata = new ArrayList<>();
         String HeaderTitle = "Dicoding Untuk Indonesia";
+        CardViewKotaAdapter cardViewHeroAdapter;
 
-        @Override
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.main_layout);
@@ -32,12 +33,15 @@ public class MainActivity extends AppCompatActivity {
             showRecyclerCardView();
 
 
-        }
+//            CardViewKotaAdapter cardViewHeroAdapter
+
+
+    }
 
 
         private void showRecyclerCardView(){
             recyclerKota.setLayoutManager(new LinearLayoutManager(this));
-            CardViewKotaAdapter cardViewHeroAdapter = new CardViewKotaAdapter(arraylistdata);
+            cardViewHeroAdapter = new CardViewKotaAdapter(arraylistdata);
             recyclerKota.setAdapter(cardViewHeroAdapter);
 
         }

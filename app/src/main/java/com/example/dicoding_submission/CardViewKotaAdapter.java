@@ -1,6 +1,7 @@
 package com.example.dicoding_submission;
 
 
+import android.content.Intent;
 import android.view.LayoutInflater;import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
+
 
 
 public class CardViewKotaAdapter extends RecyclerView.Adapter<CardViewKotaAdapter.CardViewViewHolder> {
@@ -34,7 +36,7 @@ public class CardViewKotaAdapter extends RecyclerView.Adapter<CardViewKotaAdapte
     @Override
     public void onBindViewHolder(@NonNull final CardViewViewHolder holder, int position) {
 
-        Kota kota = listkota.get(position);
+        final Kota kota = listkota.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(kota.getPhoto())
                 .apply(new RequestOptions().override(350, 550))
@@ -45,16 +47,9 @@ public class CardViewKotaAdapter extends RecyclerView.Adapter<CardViewKotaAdapte
         holder.tomboldetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "Favorite " +
-                        listkota.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
-            }
-        });
+                Toast.makeText(holder.itemView.getContext(), "Nama Kota = "
+                        +kota.getName().toString(), Toast.LENGTH_SHORT).show();
 
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "Kamu memilih " + listkota.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -6,16 +6,16 @@ public class KotaData {
 
 
     private static String[] kotaNames = {
-            "Ahmad Dahlan",
-            "Ahmad Yani",
-            "Sutomo",
-            "Gatot Soebroto",
-            "Ki Hadjar Dewantarai",
-            "Mohammad Hatta",
-            "Soedirman",
-            "Soekarno",
-            "Soepomo",
-            "Tan Malaka"
+            "Surabaya",
+            "Semarang",
+            "Jakarta",
+            "Jogja",
+            "Bali",
+            "Bandung",
+            "NTB",
+            "NTT",
+            "Makassar",
+            "Sumbar"
     };
 
     private static String[] kotaDetails = {

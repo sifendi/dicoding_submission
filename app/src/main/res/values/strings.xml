@@ -5,4 +5,7 @@
     <string name="titleofcity">The name of city</string>
 
 
+    <string name="provinsi">Provinsi</string>
+    <string name="popularity">Julukan</string>
+
 </resources>
